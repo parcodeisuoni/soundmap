@@ -1,0 +1,31 @@
+#map_canvas {
+  height: 400px;
+  width: 100%;
+}
+#soundmap-attachments-list {
+  margin-top: 10px;
+}
+#soundmap-attachments-list .att-info {
+  float: left;
+  font-size: 12px;
+  width: 80%;
+  overflow-x: none;
+}
+#soundmap-attachments-list .att-info .att-length {
+  font-style: italic;
+}
+#soundmap-attachments-list .att-info .delete-att-item {
+  color: red;
+  font-size: 10px;
+}
+#soundmap-attachments-list .att-icon {
+  float: left;
+  margin-right: 1%;
+  width: 19%px;
+}
+#soundmap-attachments-list .att-icon img {
+  width: 100%;
+}
+.clear {
+  clear: both;
+}

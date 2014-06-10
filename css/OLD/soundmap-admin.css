@@ -1,0 +1,135 @@
+
+#map_canvas, #map_canvas_options{width:100%; height:400px;}
+#sound-att-table {width:100%; table-layout: fixed; word-break: break-word; border-collapse: collapse;}
+#sound-att-table th{text-align:left;}
+#sound-att-table .soundmap-att-left{width:60%; padding-right:6px}
+#sound-att-table tr {border-bottom:1px solid #666;}
+#sound-att-table td {padding: 3px 0;}
+
+#sound-att-table .soundmap-att-left span{
+  float: left;
+}
+
+.uploadFileQueued{
+    height:36px;
+    margin:10px 0;
+}
+
+.filename{
+	position:relative;
+	margin-top:10px;
+	font-weight: bold;
+}
+
+#uploader_drop{
+  height: 100px;
+  width: 100%;
+}
+
+#uploader{
+}
+
+#uploader_drop.hover{
+  background-color: #94cde7;
+}
+
+#uploader_over.hover{
+  display: block;
+}
+
+#uploader_buttons{
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+
+}
+#uploader_buttons h4{
+  border: 0;
+  background-image: none;
+  background-color: transparent;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+.fileItem{
+  height: 40px;
+}
+.fileItem .fileName{
+  margin-left: 10px;
+}
+.meter {
+  height: 8px;  /* Can be anything */
+  position: relative;
+  background: #555;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 0px;
+  -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+  -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+  box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+     -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+         -moz-border-radius-topright: 8px;
+      -moz-border-radius-bottomright: 8px;
+             border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+      -webkit-border-top-left-radius: 20px;
+   -webkit-border-bottom-left-radius: 20px;
+          -moz-border-radius-topleft: 20px;
+       -moz-border-radius-bottomleft: 20px;
+              border-top-left-radius: 20px;
+           border-bottom-left-radius: 20px;
+  background-color: rgb(43,194,83);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(43,194,83)),
+    color-stop(1, rgb(84,240,84))
+   );
+  background-image: -webkit-linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+   );
+  background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+   );
+  background-image: -ms-linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+   );
+  background-image: -o-linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+   );
+  -webkit-box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  -moz-box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.file-delete{
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-image: url(../img/delete.png);
+  float: right;
+  margin-top: 3px;
+}
