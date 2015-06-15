@@ -186,7 +186,7 @@ if ( ! class_exists( 'Soundmap' ) ) {
 								<div class='att-info'>
 									<a href='{$data['url']}'><strong>{$data['title']}</strong></a><br/>
 									<span class='att-length'>{$data['fileLength']}</span><br/>
-									<a href='#' class='delete-att-item'>" . _e('Close') . "</a>
+									<a href='#' class='delete-att-item'>" . __('Close') . "</a>
 								</div>
 								<div class='clear'></div>
 								<input type='hidden' name='soundmap-att-ids[]' value='{$file}' />
