@@ -25,7 +25,7 @@
  *
  * @package Soundmap
  * @author Xavier Balderas
- * @version 0.5
+ * @version 0.6
  *
  */
 
