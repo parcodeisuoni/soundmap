@@ -1,10 +1,21 @@
 <?php
 
 
+/**
+ *
+ *
+ *
+ *
+ *
+ */
 class Soundmap_Player {
     	
-        function Soundmap_Player (){
-                $da = 12;
+    /**
+     *
+     *
+     */
+	function Soundmap_Player () {
+		$da = 12;
 	}
     
 }
