@@ -51,7 +51,7 @@
                     }, {}
                 )
             );
-            _.bindAll(this);
+            _.bindAll(soundmap.initMap);
 
             options = {
                 type:    'POST',
