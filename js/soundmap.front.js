@@ -82,7 +82,7 @@
                 this.callbacks.marker_click.apply(this, [response.data, this.ajaxMarker]);
                 return;
             }
-            //No tenemos ningún callback, por lo que abrimos la ventana. En este caso sólo lo haremos con el player y el título.
+            // We have no callback, so we opened the window. In this case we will only do with the player and title.
             this.ajaxMarker.addEventListener('popupopen', this.addPlayer, this);
             this.ajaxMarker.bindPopup(response.data.html).openPopup();
         },
@@ -106,7 +106,7 @@
     });
 
     $(document).ready(function(){
-        //soundmap.initMap();
+        soundmap.initMap();
     });
 
 }(jQuery));
