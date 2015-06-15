@@ -58,10 +58,8 @@ function the_map(  $css_id = 'map_canvas', $all_markers = FALSE, $options = arra
 
     global $soundmap; ?>
 
-    <div class="<?php echo $css_id ?> soundmap-canvas">
-        <div style="height:100%;">
-
-        </div>
+    <div id="<?php echo $css_id; ?>" class="soundmap-canvas">
+        <div style="height:100%;"></div>
     </div>
     <div id="hidden-markers-content" style ="display:hidden;"></div>
 	
