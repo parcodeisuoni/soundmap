@@ -51,7 +51,7 @@
                     }, {}
                 )
             );
-            _.bindAll(soundmap.initMap);
+            // _.bindAll(soundmap.initMap());
 
             options = {
                 type:    'POST',
