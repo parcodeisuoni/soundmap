@@ -13,20 +13,41 @@
             marker_click: undefined
         },
 
-        init: function (selector, query){
-            this.map = L.map(selector,{center: [this.origin.lat, this.origin.lng], zoom: this.origin.zoom, scrollWheelZoom: false});
-            this.layers.SATELLITE = new L.Google();
-            this.layers.TERRAIN = new L.Google('TERRAIN');
-            this.layers.HYBRID = new L.Google('HYBRID');
-            this.layers.ROADMAP = new L.Google('ROADMAP');
+        initMap: function( selector, query ) {
+            this.map = L.map('map_canvas',{center: [this.origin.lat, this.origin.lng], zoom: this.origin.zoom, scrollWheelZoom: false});
+            this.layers.SATELLITE =     new L.Google();
+            this.layers.TERRAIN =       new L.Google('TERRAIN');
+            this.layers.HYBRID =        new L.Google('HYBRID');
+            this.layers.ROADMAP =       new L.Google('ROADMAP');
+			
+			this.layers.OSM =           new L.tileLayer.provider('OpenStreetMap.Mapnik');
+			this.layers.OSM_HOT =       new L.tileLayer.provider('OpenStreetMap.HOT');
+			this.layers.OSM_BW =        new L.tileLayer.provider('OpenStreetMap.BlackAndWhite');
+			
+			this.layers.GrayScale =     new L.tileLayer.provider('OpenMapSurfer.Grayscale');
+			
+			this.layers.StamenWater =   new L.tileLayer.provider('Stamen.Watercolor');
+			this.layers.StamenTon =     new L.tileLayer.provider('Stamen.Toner');
+			this.layers.StamenTonLite = new L.tileLayer.provider('Stamen.TonerLite');
+			
+			this.layers.ThundLand =     new L.tileLayer.provider('Thunderforest.Landscape');
+			
             this.map.addLayer(this.layers[this.mapType]);
             this.map.addControl(
                 new L.Control.Layers(
                     {
-                        'Google':this.layers.SATELLITE,
-                        'Google Terrain': this.layers.TERRAIN,
-                        'Google Hybrid': this.layers.HYBRID,
-                        'Google Roadmap': this.layers.ROADMAP
+                        'Google':             this.layers.SATELLITE,
+                        'Google Terrain':     this.layers.TERRAIN,
+                        'Google Hybrid':      this.layers.HYBRID,
+                        'Google Roadmap':     this.layers.ROADMAP,
+						'Open Street':        this.layers.OSM,
+						'Open Street Hot':    this.layers.OSM_HOT,
+						'Open Black & White': this.layers.OSM_BW,
+						'GrayScale':          this.layers.GrayScale,
+						'Watercolor':         this.layers.StamenWater,
+						'Toner':              this.layers.StamenTon,
+						'Toner Lite':         this.layers.StamenTonLite,
+						'Landscape':          this.layers.ThundLand			
                     }, {}
                 )
             );
