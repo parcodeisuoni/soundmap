@@ -302,7 +302,7 @@ if ( ! class_exists( 'Soundmap' ) ) {
             wp_enqueue_script( 'underscore' );
             wp_enqueue_script( 'mediaelement' );
 
-            wp_enqueue_script( 'soundmap-front', plugins_url( 'js/soundmap.front.js', __FILE__ ), array(), '0.1', TRUE );
+            wp_enqueue_script( 'soundmap-front', plugins_url( 'js/soundmap.front.js', __FILE__ ), array( 'leafletjs', 'google-maps' ), '0.1', TRUE );
             wp_enqueue_style( 'soundmap-front-css', plugins_url( 'css/soundmap.front.css', __FILE__ ), array(), '0.1', 'all' );
 
             $params = array();
@@ -744,11 +744,11 @@ if ( ! class_exists( 'Soundmap' ) ) {
             if ( !isset( $_POST['query'] ) )
                 return;
 
-            //checkeo la cache
+            // check if we have some in cache
             $save_transient = false;
             if ( $_POST['query'] == 'all' ) {
                 $transient_data = get_transient( 'soundmap_JSON_markers' );
-                if( $transient_data !== false ) {
+                if ( $transient_data !== false ) {
                     echo json_encode( $transient_data );
                     die();
                 }
